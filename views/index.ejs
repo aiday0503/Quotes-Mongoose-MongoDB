@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Quotes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <% if(typeof(errors) != 'undefined' ) { %>
+        <% for (var x in errors) { %>
+            <h3>
+                <%= errors[x].message %>mode
+            </h3>
+            <% } %>
+                <% } %>
+                    <div class="container">
+                        <h1>Welcome to Quotes</h1>
+                        <form action="/quotes" method="post">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text|password|email|number|submit|date|datetime|datetime-local|month|color|range|search|tel|time|url|week" class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="Your Name">
+                            </div>
+                            <label for="quote">Your Quote</label>
+                            <div class="form-group">
+                                <label for="quote"></label>
+                                <textarea class="form-control" name="quote" id="quote" rows="10" cols="20"></textarea>
+                            </div>
+
+                            <button type="submit">Add my Quote!</button>
+                        </form>
+                        <a href="/quotes"> <button type="submit">Skip to Quotes!</button></a>
+                    </div>
+
+</body>
+
+</html>
